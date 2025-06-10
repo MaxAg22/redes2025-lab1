@@ -1,0 +1,338 @@
+{
+	"info": {
+		"_postman_id": "60a4b305-8021-409e-bda3-206189469b9f",
+		"name": "API peliculas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43498181",
+		"_collection_link": "https://jeremiasalmeira.postman.co/workspace/Jeremias-Almeira's-Workspace~43ef5c9d-0a74-4fde-8789-b93cd93f7986/collection/43498181-60a4b305-8021-409e-bda3-206189469b9f?action=share&source=collection_link&creator=43498181"
+	},
+	"item": [
+		{
+			"name": "get_all_movies",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/peliculas",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"peliculas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_movie",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/peliculas/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"peliculas",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add_movie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"titulo\": \"Night at the Museum\",\n  \"genero\": \"Aventura\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/peliculas",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"peliculas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_movie",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"titulo\": \"Zodiac\",\n  \"genero\": \"Crimen\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/peliculas/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"peliculas",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "remove_movie",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/peliculas/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"peliculas",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_movie_by_genre",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/peliculas/get_movie_by_genre?genre=",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"peliculas",
+						"get_movie_by_genre"
+					],
+					"query": [
+						{
+							"key": "genre",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_movie_by_title_keyword",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/peliculas/get_movie_by_title_keyword?kw=",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"peliculas",
+						"get_movie_by_title_keyword"
+					],
+					"query": [
+						{
+							"key": "kw",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "random_movie",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/peliculas/random",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"peliculas",
+						"random"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "random_movie_by_genre",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/peliculas/random_by_genre?genre=Drama",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"peliculas",
+						"random_by_genre"
+					],
+					"query": [
+						{
+							"key": "genre",
+							"value": "Drama"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "film_for_holiday",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/peliculas/holiday?genre=",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"peliculas",
+						"holiday"
+					],
+					"query": [
+						{
+							"key": "genre",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "film_for_holiday_type",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/peliculas/holiday_type?genre=Drama&h_type=trasladable",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"peliculas",
+						"holiday_type"
+					],
+					"query": [
+						{
+							"key": "genre",
+							"value": "Drama"
+						},
+						{
+							"key": "h_type",
+							"value": "trasladable"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
